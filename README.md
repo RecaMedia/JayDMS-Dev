@@ -35,10 +35,15 @@ $ npm install
 JayDMS development uses `http://jdms-dev.local` URL for local testing. Modify your host file to include the following.
 
 **Add URL to host file**
+
 `127.0.0.1	jdms-dev.local`
+
 **Mac**
+
 `/private/etc/hosts`
+
 **Windows**
+
 `\Windows\System32\drivers\etc\hosts`
 
 Next, you'll have to modify your vhost file to redirect the dev URL to the appropriate folder.
@@ -68,6 +73,6 @@ If you would like to support JayDMS and it's development, please star this proje
 
 ## License
 
-JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [commercial](http://jaydms.com/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/trademark).
+JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/trademark).
 
-&copy; 2020 JayDMS Name & JayDMS Logo &trade;; Shannon Reca - RM Digital Services.
+&copy; 2020 JayDMS Name & JayDMS Logo &trade;, Shannon Reca - RM Digital Services.
