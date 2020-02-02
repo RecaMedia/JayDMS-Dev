@@ -4,9 +4,9 @@
 
 A Front-End Developer’s tool for rapid development, design, and content management. Easily build components, templates, post types and stashes to help generate your site structure and content. Read more at [JayDMS.com](http://jaydms.com/page/about).
 
-## Getting Started
+## Want to Contribute?
 
-All development files live under the `/development` folder. The `/project` folder serves as an example _root directory_ for local development to test JayDMS. Make sure you have [Node JS](https://nodejs.org/en/), [Gulp JS](https://gulpjs.com/), and Apache/PHP (suggested for [Mac](https://www.mamp.info/en/) or [Windows](http://www.wampserver.com/en/download-wampserver-64bits/)) installed locally. If you have prepared your local environment, begin by following the steps below.
+First read our [contributing](https://github.com/RecaMedia/JayDMS-Dev/blob/master/CONTRIBUTING.md) readme file prior to starting. With that said, keep in mind all development files live under the `/development` folder. The `/project` folder serves as an example _root directory_ for local development to test JayDMS. Make sure you have [Node JS](https://nodejs.org/en/), [Gulp JS](https://gulpjs.com/), and Apache/PHP (suggested for [Mac](https://www.mamp.info/en/) or [Windows](http://www.wampserver.com/en/download-wampserver-64bits/)) installed locally. If you have prepared your local environment, begin by following the steps below.
 
 **Navigate to development folder**
 ```sh
@@ -38,7 +38,6 @@ Next, you'll have to modify your vhost file to redirect the dev URL to the appro
 	ServerName jdms-dev.local
 	DocumentRoot c:/path/to/your/repo/directory/project
 	<Directory  "c:/path/to/your/repo/directory/project/">
-		Options +Indexes +Includes +FollowSymLinks +MultiViews
 		AllowOverride All
 		Require all granted
 	</Directory>
