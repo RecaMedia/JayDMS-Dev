@@ -1,3 +1,5 @@
+![alt text](http://jaydms.com/img/github_cover.jpg "JayDMS")
+
 # Contributors
 
 If you are interested in making a code contribution and would like to learn more about the technologies that are used, check out the list below.
@@ -9,9 +11,9 @@ If you are interested in making a code contribution and would like to learn more
 
 ## How Do I Contribute?
 
-* Fork the repository. This means that you will have a copy of the repository under RecaMedia/JayDMS-Dev.
+* Fork the repository.
 * Clone the repository to your local machine.
-* Create a new branch for your fix.
+* Create a new branch for your fix or feature.
 * Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
 * Submit a pull request to the upstream repository.
 * Title the pull request with a short description of the changes made and the issue or bug number associated with your change.
@@ -75,4 +77,4 @@ If you would like to support JayDMS and it's development, please star this proje
 
 JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/trademark).
 
-&copy; 2020 JayDMS Name & JayDMS Logo &trade;, Shannon Reca - RM Digital Services.
+&copy; 2020 JayDMS Name & JayDMS Logo &trade; - Shannon Reca, RM Digital Services.
