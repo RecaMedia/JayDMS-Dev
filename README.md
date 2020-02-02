@@ -1,5 +1,9 @@
 ![alt text](http://jaydms.com/img/github_cover.jpg "JayDMS")
 
+# About JayDMS
+
+A Front-End Developer’s tool for rapid development, design, and content management. Easily build components, templates, post types and stashes to help generate your site structure and content. Read more at [JayDMS.com](http://jaydms.com/page/about).
+
 # Contributors
 
 If you are interested in making a code contribution and would like to learn more about the technologies that are used, check out the list below.
@@ -69,12 +73,19 @@ At this point, you can start running your Apache/PHP environment. Within the `/d
 $ npm start
 ```
 
+To finalize files for release, use the following command.
+
+**Minify for release**
+```sh
+$ npm run deploy
+```
+
 ## Like JayDMS?
 
 If you would like to support JayDMS and it's development, please star this project to bring awareness. Also, please support RM Digital Services with your [donations](https://github.com/sponsors/RecaMedia) for engineering and development services.
 
 ## License
 
-JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/trademark).
+JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/page/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/page/trademark).
 
 &copy; 2020 JayDMS Name & JayDMS Logo &trade; - Shannon Reca, RM Digital Services.
