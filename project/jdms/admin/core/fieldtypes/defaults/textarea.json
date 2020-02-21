@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Textarea",
+  "form": {
+    "textarea": {
+      "value": "",
+      "input": "textarea"
+    }
+  }
+}

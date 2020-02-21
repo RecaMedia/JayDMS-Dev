@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "File",
+  "form": {
+    "file": {
+      "value": "",
+      "input": "file"
+    }
+  }
+}

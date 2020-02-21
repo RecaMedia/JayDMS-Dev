@@ -1,0 +1,8 @@
+{
+    "require": {
+        "twig/twig": "^2.6",
+        "twig/extensions": "^1.5",
+        "leafo/scssphp": "0.0.12",
+        "matthiasmullie/minify": "^1.3"
+    }
+}

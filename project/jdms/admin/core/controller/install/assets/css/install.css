@@ -1,0 +1,27 @@
+body {
+  background-image: url('/jdms/admin/core/controller/install/assets/img/boardwalk.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.ui-install-panel {
+  position: relative;
+  z-index: 2;
+}
+
+.ui-install-panel .ui-btn {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+
+.ui-card--error p {
+  color: red;
+}
+
+.ui-card--error p:last-of-type {
+  margin-bottom: 0;
+}

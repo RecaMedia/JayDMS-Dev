@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Color Picker",
+  "form": {
+    "color": {
+      "value": "",
+      "input": "colorpicker"
+    }
+  }
+}

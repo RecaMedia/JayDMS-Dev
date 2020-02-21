@@ -1,0 +1,139 @@
+.ui-frontend-editor {
+  position: relative;
+
+  &--ab-testing:before {
+    background-color: $ab_border;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 1px;
+  }
+
+  &__tools {
+    height: 40px;
+    padding: 5px 20px;
+
+    .ui-input-wrapper {
+      margin: 0;
+    }
+  }
+
+  &__editor {
+
+    .ui-editor {
+      border-top: 1px dashed #cccccc !important;
+    }
+  }
+
+  .nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-link {
+    background-color: $input_background;
+    border-color: #ffffff;
+    border-bottom-color: #dee2e6;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 10px;
+    transition: border-color $animTiming, background-color $animTiming, color $animTiming;
+
+    &:hover {
+      background-color: $buttonHoverColor;
+      border-color: #ffffff;
+      border-bottom-color: #dee2e6;
+      color: $trim;
+      text-decoration: none;
+    }
+
+    &.active:hover {
+      background-color: #ffffff;
+      border-color: #dee2e6;
+      border-bottom-color: #ffffff;
+      color: #000000;
+    }
+  }
+
+  &__tabs {
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    height: 600px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__tab {
+    background-color: #ffffff;
+    height: 100%;
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+
+    &--active {
+      left: 0;
+      opacity: 1;
+    }
+
+    & > .row:nth-last-child(1) > div[class^="col-"], & > .row:nth-last-child(1) > div[class*=" col-"] {
+      height: 100%;
+      position: absolute;
+    }
+
+    & > .row:nth-child(2) > div[class^="col-"], & > .row:nth-child(2) > div[class*=" col-"] {
+      height: calc(100% - 39px);
+      position: absolute;
+    }
+
+    .ui-editor {
+      border-radius: 0;
+      border: none;
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .ace_editor {
+      height: calc(100% - 29px) !important;
+      position: absolute;
+      width: 100%;
+    }
+
+    .ui-btn--shortcode {
+      bottom: 15px;
+      right: 0;
+    }
+  }
+
+  &__preview-button {
+    align-items: center;
+    display: flex;
+    padding: 0 0 0 5px;
+
+    .ui-btn {
+      background-color: lighten($trim, 38%);
+      border: 1px solid lighten($trim, 30%);
+      color: $trim;
+      padding: 0 0.4rem;
+    }
+
+    .ui-btn--preview-on {
+      background-color: $ab_background;
+      border: 1px solid $ab_border;
+      color: $ab_text;
+
+      &:hover {
+        background-color: $ab_border;
+        border: 1px solid $ab_border;
+        color: #ffffff;
+      }
+    }
+  }
+}

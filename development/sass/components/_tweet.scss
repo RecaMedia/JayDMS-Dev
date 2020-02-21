@@ -1,0 +1,48 @@
+.ui-tweet {
+  border: 1px solid rgba($borderColor, 0.6);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
+
+  &__info-bar {
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+
+    a {
+      color: #1DA1F2;
+    }
+
+    img, svg {
+      width: 30px;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    svg {
+      fill: #1DA1F2;
+      float: right;
+    }
+  }
+
+  &__date {
+    color: #777777;
+    float: right;
+    margin-right: 20px;
+    line-height: 30px;
+  }
+
+  &__text {
+    color: $site_text;
+
+    @media (min-width: 768px) {
+      font-size: 1.4rem;      
+    }
+  }
+}

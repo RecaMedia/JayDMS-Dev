@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Group",
+  "form": {
+    "group": {
+      "value": {},
+      "input": "group"
+    }
+  }
+}

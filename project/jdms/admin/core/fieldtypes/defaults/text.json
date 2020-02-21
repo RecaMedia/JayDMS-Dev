@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Text",
+  "form": {
+    "text": {
+      "value": "",
+      "input": "text"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.ui-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  &__view {
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+
+    iframe {
+      border: none;
+      height: 100vh;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:first-of-type {
+      border-bottom: 1px solid $nav_bar;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    align-items: stretch;
+    flex-direction: row;
+
+    &__view {
+      flex: 1 1 50%;
+      height: 100vh;
+
+      &:first-of-type {
+        border-right: 1px solid $nav_bar;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Repeater",
+  "form": {
+    "repeater": {
+      "value": [],
+      "input": "repeater"
+    }
+  }
+}

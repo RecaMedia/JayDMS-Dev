@@ -1,0 +1,129 @@
+.ui-global-editors {
+
+  .nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-link {
+    background-color: $input_background;
+    border-color: #ffffff;
+    border-bottom-color: #dee2e6;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 10px;
+    transition: border-color $animTiming, background-color $animTiming, color $animTiming;
+
+    &:hover {
+      background-color: $buttonHoverColor;
+      border-color: #ffffff;
+      border-bottom-color: #dee2e6;
+      color: $trim;
+      text-decoration: none;
+    }
+
+    &.active:hover {
+      background-color: #ffffff;
+      border-color: #dee2e6;
+      border-bottom-color: #ffffff;
+      color: #000000;
+    }
+  }
+}
+  
+.ui-global-editor {
+
+  &__tools {
+    display: flex;
+    height: 40px;
+    padding: 5px 20px;
+
+    .ui-input-wrapper {
+      margin: 0;
+    }
+    
+    & > * {
+      margin-left: 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__text {
+      display: inline-block;
+      flex: 1 1 auto;
+      line-height: 30px;
+      padding: 0 5px;
+      text-align: left;
+    }
+  }
+
+  &__midbar {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+  }
+
+  &__editor {
+
+    .ui-editor {
+      border-top: 1px dashed #cccccc !important;
+    }
+
+    &:nth-child(1):nth-last-child(2), &:nth-child(1):nth-last-child(2) ~ &:last-child {
+      position: relative !important;
+      height: 285px !important;
+
+      .ui-editor {
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  &__tabs {
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    height: 647px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__tab {
+    background-color: #ffffff;
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    &--active {
+      display: block;
+    }
+
+    & > .row:nth-last-child(1) > .ui-global-editor__editor, & > .row:nth-last-child(1) > .ui-global-editor__editor {
+      height: 100%;
+      position: absolute;
+    }
+
+    & > .row:nth-child(2) > .ui-global-editor__editor, & > .row:nth-child(2) > .ui-global-editor__editor {
+      height: calc(100% - 39px);
+      position: absolute;
+    }
+
+    .ui-editor {
+      border-radius: 0;
+      border: none;
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .ace_editor {
+      height: calc(100% - 29px) !important;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}

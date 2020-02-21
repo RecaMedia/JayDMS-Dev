@@ -1,0 +1,148 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $site_background;
+  color: $site_text;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: color $animTiming, background-color $animTiming;
+
+  &.ui-dev-mode {
+    background-color: $dev_site_background;
+    color: $dev_site_text;
+  }
+}
+
+small {
+  color: #aaaaaa;
+}
+
+input {
+  transform: translateZ(0);
+}
+
+.navbar {
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+a {
+  color: $site_text;
+  transition: color $animTiming;
+
+  &:hover {
+    color: $site_text;
+    text-decoration: underline;
+  }
+
+  .ui-dev-mode & {
+    color: $dev_site_text;
+
+    &:hover {
+      color: $dev_site_text;
+    }
+  }
+}
+
+.ui-columns {
+  display: flex;
+}
+
+.ui-menu-col {
+  flex: 0 1 160px;
+}
+
+.ui-content-col {
+  flex: 1 1 auto;
+  
+  .container {
+    margin: 0;
+  }
+}
+
+.ui-sticky-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 61;
+  z-index: 1020;
+}
+
+a.ui-btn, button.ui-btn, .ui-btn {
+  background-color: $trim;
+  border: none;
+  color: #fff;
+  font-size: .8rem;
+
+  i {
+    pointer-events: none;
+  }
+
+  &--icon {
+    border-radius: 50%;
+    font-size: 1.2rem;
+    height: 28px;
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 28px;
+  }
+
+  &:hover {
+    background-color: darken($trim, 15%);
+    border-color: darken($trim, 15%);
+    color: #fff;
+  }
+
+  &.ui-btn-white {
+    background-color: white;
+    border: 1px solid #DDDDDD;
+    color: #777777;
+
+    &:hover {
+      background-color: $buttonHoverColor;
+    }
+  }
+
+  &.ui-btn-text {
+    background-color: transparent;
+    border: none;
+    color: #777777;
+    margin-bottom: .5rem;
+    padding: 0 5px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+
+    & .ui-btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ui-btn--shortcode {
+  bottom: 30px;
+  position: absolute;
+  right: 30px;
+  padding: 0px 5px;
+  z-index: 1;
+
+  i {
+    color: #272822;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    line-height: 1rem;
+  }
+}
+
+.icon.ion-md-remove-circle-outline {
+  color: #ff9a9a;
+  font-size: 1.30rem;
+  line-height: 1rem;
+}

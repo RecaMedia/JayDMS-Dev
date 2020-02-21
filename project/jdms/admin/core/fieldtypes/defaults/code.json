@@ -1,0 +1,9 @@
+{
+  "fieldtype_name": "Code",
+  "form": {
+    "code": {
+      "value": "",
+      "input": "code"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.ui-modal {
+  background-color: rgba(#000000, 0.7);
+  display: block;
+  opacity: 1;
+  z-index: z('modal') + 1;
+
+  button:focus {
+    outline: none;
+  }
+}

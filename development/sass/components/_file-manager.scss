@@ -1,0 +1,540 @@
+$fileManagerColor: #6d797b;
+$fileManagerBg: #f9f9f9;
+
+.ui-file-manager {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  padding: 0 15px 15px;
+
+  &--lightbox {
+    border-radius: 4px;
+    clip: auto;
+    height: calc(100vh - 60px);
+    position: relative;
+    width: calc(100vw - 100px);
+
+    &-button {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30px;
+    }
+
+    .ui-file-manager {
+      border-radius: 4px;
+      clip: auto;
+      height: 100%;
+      margin: 0;
+      min-height: 100%;
+      min-width: 100%;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .ui-file-manager__view {
+      height: 100%;
+    }
+  }
+  
+  &__title {
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
+  &__view {
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+  }
+
+  &__browser {
+    background-color: $fileManagerBg;
+    height: 280px;
+    overflow: hidden;
+    padding: 50px 15px 15px;
+    position: relative;
+    width: 100%;
+
+    &__nav {
+      height: 40px;
+      left: 0;
+      padding: 10px 10px 0 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .ui-btn {
+        height: 30px;
+        margin-right: 10px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    & > &__list {
+      height: calc(100% - 50px);
+      left: 0;
+      overflow: auto;
+      padding: 0 15px;
+      position: absolute;
+      top: 50px;
+      width: 100%;
+    }
+
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__button {
+      align-items: stretch;
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      color: $fileManagerColor;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      font-size: 14px;
+      outline: none;
+      padding: 0 10px;
+      text-align: left;
+      transition: color $animTiming;
+      width: 100%;
+
+      .icon {
+        color: #80b7c2;
+        display: block;
+        flex: 0 1 40px;
+        font-size: 24px;
+        min-width: 40px;
+        transition: color $animTiming;
+      }
+
+      &:focus, &:active {
+        outline: none;
+      }
+
+      &:hover {
+        color: $trim;
+
+        .icon {
+          color: $trim;
+        }
+      }
+    }
+
+    &__filename {
+      align-items: center;
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    &__info-size {
+      align-items: center;
+      display: flex;
+      flex: 0 1 auto;
+      font-size: 10px;
+      padding-left: 5px;
+    }
+
+    &__list-item {
+      display: flex;
+      min-height: 40px;
+      flex-direction: column;
+
+      .ui-file-manager__browser__list {
+        display: none;
+        position: relative;
+        margin-left: 20px;
+        padding-left: 20px;
+        
+        &:before {
+          border-left: 1px dashed rgba($nav_bar, 0.5);
+          content: '';
+          display: block;
+          height: calc(100% - 20px);
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 20px;
+        }
+
+        .ui-file-manager__browser__list-item {
+          position: relative;
+        
+          &:before {
+            border-bottom: 1px dashed rgba($nav_bar, 0.5);
+            content: '';
+            display: block;
+            height: 20px;
+            left: -20px;
+            position: absolute;
+            top: 0;
+            width: 20px;
+          }
+        }
+      }
+
+      &--open {
+
+        &.active > .ui-file-manager__browser__button {
+          color: $trim;
+
+          .icon {
+            color: $trim;
+
+            &:before {
+              content: "\f2f4";
+            }
+          }
+        }
+
+        & > .ui-file-manager__browser__list {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__directory {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    color: $fileManagerColor;
+    flex: 1 1 auto;
+
+    &__list {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__select {
+      appearance: none;
+      background-color: $fileManagerBg;
+      border: none;
+      cursor: pointer;
+      height: 0;
+      margin: 15px 15px 0 15px;
+      overflow: hidden;
+      padding-top: 56%;
+      position: relative;
+      width: calc(50vw - 70px);
+      transition: background-color $animTiming, border-color $animTiming;
+
+      .icon {
+        border-right: 1px dashed rgba($nav_bar, 0.25);
+        border-bottom: 1px dashed rgba($nav_bar, 0.25);
+        height: 60px;
+        left: 10px;
+        position: absolute;
+        top: 10px;
+        width: 80px;
+        color: #dddddd;
+        font-size: 2.6rem;
+        transition: border-color $animTiming, color $animTiming;
+      }
+
+      .img {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100% - 20px);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: calc(100% - 20px);
+      }
+
+      &:focus, &:active {
+        outline: none;
+      }
+
+      &:hover {
+        background-color: lighten($trim, 40%);
+        border-color: darken($trim, 10%);
+
+        .icon {
+          border-color: darken($trim, 10%);
+          color: $trim;
+        }
+      }
+    }
+
+    &__filename {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: calc(50vw - 60px);
+    }
+
+    &__list-item {
+      overflow: hidden;
+    }
+
+    &__tool-bar {
+      border-bottom: 5px solid $fileManagerBg;
+      padding: 10px 15px;
+
+      &__upload {
+        height: 28px;
+        margin: -8px 10px -4px 0;
+        position: relative;
+        width: 70px;
+
+        &:before {
+          content: 'Upload';
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+        input {
+          cursor: pointer;
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    &__columns {
+      flex: 1 1 auto;
+
+      .ui-file-manager__directory__files {
+        display: none;
+      }
+      
+      .ui-file-manager__selection {
+        width: 100%;
+      }
+    }
+
+    &__files {
+      max-height: calc(100% - 50px);
+      overflow: auto;
+      padding: 15px;
+    }
+  }
+
+  &__selection {
+    background-color: $fileManagerBg;
+    padding: 25px 30px 30px;
+    position: relative;
+
+    &__btn-close {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      color: $fileManagerColor;
+      cursor: pointer;
+      font-size: 1.2rem;
+      height: 30px;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: -5px;
+      width: 30px;
+
+      .icon {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    &__data {
+
+      &__image {
+        background-color: #eeeeee;
+        line-height: 1rem;
+        margin-bottom: 30px;
+        text-align: center;
+
+        .icon {
+          font-size: 6rem;
+          text-align: center;
+        }
+
+        .img {
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 0;
+          padding-top: 56%;
+        }
+      }
+
+      &__info {
+        list-style: none;
+        margin: 0 0 30px 0;
+        padding: 0;
+
+        li {
+          padding-bottom: 5px;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &__form {
+
+        .form-group {
+          max-width: 65%;
+        }
+
+        input {
+          background-color:white;
+          border: 1px solid#eee;
+          height: 30px;
+          max-width: 100%;
+          padding: 4px 6px;
+        }
+
+        .ui-btn {
+          background-color:#ccc;
+          border: none;
+          color:#333;
+          height: 28px;
+          margin-left: 5px;
+          padding: 4px 10px;
+          width: 28px;
+        }
+      }
+
+      &__btn-delete, &__btn-action {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+
+      &__btn-delete {
+        color: #f00 !important;
+      }
+      
+      &__btn-action {
+        color: $trim !important;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    height: calc(100vh - 70px);
+    padding: 0 30px 30px;
+
+    &__title {
+      padding: 0 15px 15px;
+    }
+
+    &__view {
+      flex-direction: row;
+      max-height: 100%;
+      overflow: hidden;
+
+      .ui-file-manager__title + & {
+        max-height: calc(100% - 100px);
+      }
+    }
+
+    &__browser {
+      flex: 1 1 auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 460px;
+      min-width: 360px;
+    }
+
+    &__directory {
+
+      &__select {
+        margin: 30px 30px 0 30px;
+        width: 200px;
+
+        .icon {
+          border: none;
+          color: #dddddd;
+          font-size: 6rem;
+          height: calc(100% - 20px);
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          transition: color $animTiming;
+          width: calc(100% - 20px);
+        }
+      }
+
+      &__filename {
+        width: 200px;
+      }
+
+      &__columns {
+        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-height: 100%;
+
+        .ui-file-manager__directory__files {
+          display: block;
+          flex: 1 1 auto;
+        }
+        
+        .ui-file-manager__selection {
+          flex: 1 1 auto;
+          max-width: 360px;
+          min-width: 260px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+
+    &__directory {
+
+      &__select {
+        width: 250px;
+      }
+
+      &__filename {
+        width: 250px;
+      }
+    }
+  }
+}

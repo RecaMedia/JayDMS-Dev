@@ -1,0 +1,13 @@
+{
+  "fieldtype_name": "Range",
+  "form": {
+    "start": {
+      "value": 0,
+      "input": "text"
+    },
+    "end": {
+      "value": 0,
+      "input": "text"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 # About JayDMS
 
-A Front-End Developer’s tool for rapid development, design, and content management. Easily build components, templates, post types and stashes to help generate your site structure and content. Read more at [JayDMS.com](http://jaydms.com/page/about).
+A Front-End Developer’s tool for rapid development, design, and content management. Easily build components, templates, post types and stashes to help generate your site structure and content. Read more at [JayDMS.com](http://jaydms.com/page/about). If you would like to try out the demo, visit [demo.jaydms.com](http://demo.jaydms.com/).
 
 ## Want to Contribute?
 
