@@ -31,7 +31,11 @@ class JayDMS extends Utilities {
     $this->config_file_path = dirname(__DIR__) . DIRECTORY_SEPARATOR . basename(__DIR__) . "/config.php";
 
     // Get file path to users
-    $this->users_file_path = dirname(dirname(dirname(__DIR__))) . '/content/data/core/users.json';
+    $core_dir = dirname(dirname(dirname(__DIR__))) . '/content/data/core';
+    if (!is_dir($core_dir)) {
+      mkdir($core_dir);
+    }
+    $this->users_file_path = $core_dir . '/users.json';
 
     // Handle install form submission before checking for config and user files
     $this->catchFormSubmission("install");
