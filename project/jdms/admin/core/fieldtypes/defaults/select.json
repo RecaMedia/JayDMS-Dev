@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "Select",
-  "form": {
-    "select": {
-      "value": "",
-      "input": "select"
-    }
-  }
-}

@@ -1,4 +1,0 @@
-// This is just placeholder code
-.style-name {
-  color: red;
-}

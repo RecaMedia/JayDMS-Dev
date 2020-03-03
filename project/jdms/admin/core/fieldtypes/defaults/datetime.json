@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "Date Time",
-  "form": {
-    "date": {
-      "value": "",
-      "input": "datetime"
-    }
-  }
-}

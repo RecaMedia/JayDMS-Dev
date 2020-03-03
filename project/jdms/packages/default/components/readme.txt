@@ -1,1 +1,0 @@
-Component files go here.

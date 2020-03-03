@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "radio",
-  "form": {
-    "radio": {
-      "value": "",
-      "input": "radio"
-    }
-  }
-}

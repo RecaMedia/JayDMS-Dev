@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "components",
-  "form": {
-    "components": {
-      "value": {},
-      "input": "components"
-    }
-  }
-}

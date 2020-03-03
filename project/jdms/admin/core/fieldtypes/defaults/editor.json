@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "Editor",
-  "form": {
-    "source": {
-      "value": "",
-      "input": "editor"
-    }
-  }
-}

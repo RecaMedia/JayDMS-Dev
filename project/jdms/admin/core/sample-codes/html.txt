@@ -1,4 +1,0 @@
-<!-- This is just placeholder code -->
-<div class="style-name">
-  <span>Hello</span> World!
-</div>

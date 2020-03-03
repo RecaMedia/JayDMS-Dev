@@ -1,9 +1,0 @@
-{
-  "fieldtype_name": "Checkbox",
-  "form": {
-    "checkbox": {
-      "value": false,
-      "input": "checkbox"
-    }
-  }
-}

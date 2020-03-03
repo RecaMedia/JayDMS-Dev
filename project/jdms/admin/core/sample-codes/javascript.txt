@@ -1,4 +1,0 @@
-// This is just placeholder code
-function hello() {
-  alert("Hello");
-}
