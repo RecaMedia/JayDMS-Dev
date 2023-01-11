@@ -201,7 +201,7 @@ export default class Menu extends React.Component {
               {name:"Sign-Out",value: this.props.basename + "/?signout=true",anchor:true}
             ]}/>
             <li className="nav-item">
-              <a className="nav-link donate" href="http://jaydms.com/donation" target="_blank"><i className="icon ion-md-heart"></i> Donate</a>
+              <a className="nav-link donate" href="https://github.com/sponsors/RecaMedia" target="_blank"><i className="icon ion-md-heart"></i> Donate</a>
             </li>
           </ul>
         </div>

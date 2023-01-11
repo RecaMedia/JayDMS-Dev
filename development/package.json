@@ -49,8 +49,7 @@
     "sweetalert2-react-content": "^1.0.1"
   },
   "devDependencies": {
-    "@aquafadas/gulp-php-minify": "^0.3.1",
-    "@cedx/gulp-php-minify": "^10.2.0",
+    "@cedx/gulp-php-minify": "^9.3.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

@@ -30,6 +30,7 @@ var gulp = require('gulp');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
 var buffer = require('vinyl-buffer');
+var phpMinify = require('@cedx/gulp-php-minify').phpMinify;
 
 gulp.task('set_to_dev', function(done) {
 	process.env.NODE_ENV = 'development';
@@ -42,20 +43,20 @@ gulp.task('set_to_prod', function(done) {
 });
 
 // API / PHP
-gulp.task('copy-php', function() {
+gulp.task('copy-php', function(done) {
 	gulp.src(DEV_API).pipe(gulp.dest(ADM_API));
 	gulp.src(DEV_BUILDER).pipe(gulp.dest(ADM_BUILDER));
 	gulp.src(DEV_CONTROLLER).pipe(gulp.dest(ADM_CONTROLLER));
-	return gulp.src(DEV_VENDOR_DL).pipe(gulp.dest(ADM_VENDOR_DL));
+	gulp.src(DEV_VENDOR_DL).pipe(gulp.dest(ADM_VENDOR_DL));
+	done();
 });
 
-gulp.task('minify-php', function() {
-	var phpMinify = require('@aquafadas/gulp-php-minify');
-
+gulp.task('minify-php', function(done) {
 	gulp.src(DEV_API, {read: false}).pipe(phpMinify()).pipe(gulp.dest(ADM_API));
 	gulp.src(DEV_BUILDER, {read: false}).pipe(phpMinify()).pipe(gulp.dest(ADM_BUILDER));
 	gulp.src(DEV_CONTROLLER, {read: false}).pipe(phpMinify()).pipe(gulp.dest(ADM_CONTROLLER));
-	return gulp.src(DEV_VENDOR_DL, {read: false}).pipe(phpMinify()).pipe(gulp.dest(ADM_VENDOR_DL));
+	gulp.src(DEV_VENDOR_DL, {read: false}).pipe(phpMinify()).pipe(gulp.dest(ADM_VENDOR_DL));
+	done();
 });
 
 // Sass Task
@@ -179,7 +180,7 @@ gulp.task('deploy-react', function() {
 gulp.task('watch', function() {
 
 	browserSync.init({
-		files: ["./index.php"],
+		files: ["./index.html"],
 		server: {
 			baseDir: ADM_DIR,
 			middleware: [ historyApiFallback() ]
@@ -198,5 +199,5 @@ gulp.task('watch', function() {
 
 // Tasks
 gulp.task('build', gulp.series(gulp.parallel('set_to_dev', 'copy-php', 'build-sass', 'build-react')));
-gulp.task('deploy', gulp.series(gulp.parallel('set_to_prod', 'copy-php', 'deploy-sass', 'deploy-react')));
+gulp.task('deploy', gulp.series(gulp.parallel('set_to_prod', 'minify-php', 'deploy-sass', 'deploy-react')));
 gulp.task('default', gulp.series(gulp.parallel('set_to_dev', 'build', 'watch')));

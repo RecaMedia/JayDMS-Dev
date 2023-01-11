@@ -119,7 +119,7 @@ class Factory {
   }
 
   private function index_replacement($string_data, $index) {
-    return (string) preg_replace("/\[(JDMS_index)\]/i", $index, $string_data);
+    return (string) preg_replace("/\{\{[ ]\[(JDMS_index)\][ ]\}\}/i", $index, $string_data);
   }
 
   private function field_string_replacement($string_data, $component_prefix, $looking_for_field, $subcomponent_html) {

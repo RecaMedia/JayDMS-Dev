@@ -91,7 +91,6 @@ if (file_exists($global_file)) {
     define("HeaderData", $global_data['header']['data']);
     define("HeaderHTML", field_string_replacement($header_component_data->frontend[$frontendIndex]->html, "header"));
   } else {
-    echo "file does not exist";
     define("HeaderData", array());
     define("HeaderHTML", "");
   }
