@@ -64,6 +64,6 @@ If you would like to support JayDMS and it's development, please star this proje
 
 ## License
 
-JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/page/commercial). Trademark of JayDMS name & logo are under the [JayDMS trademark policy](http://jaydms.com/page/trademark).
+JayDMS is licensed under the [AGPL-3.0 license](https://opensource.org/licenses/agpl-3.0) or [Commercial](http://jaydms.com/page/commercial).
 
-&copy; 2020 JayDMS Name & JayDMS Logo &trade; - Shannon Reca, RM Digital Services.
+&copy; 2020 JayDMS Name & JayDMS Logo &trade; - Shannon Reca, RecaMedia.
